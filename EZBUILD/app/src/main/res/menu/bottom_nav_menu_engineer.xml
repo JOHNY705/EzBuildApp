@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_construction_sites"
+        android:icon="@drawable/ic_construction_building"
+        android:title="@string/navigation_title_construction_sites" />
+
+    <item
+        android:id="@+id/navigation_employee_hours_menu"
+        android:icon="@drawable/ic_ballot_24"
+        android:title="@string/title_work_hours"/>
+
+    <item android:id="@+id/navigation_meetings"
+        android:icon="@drawable/ic_access_time_filled_24"
+        android:title="@string/title_meetings"/>
+
+</menu>

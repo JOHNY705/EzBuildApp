@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF7AAC08-AB81-440A-B984-5670DFD28378}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EzBuildServicesMessaging</RootNamespace>
+    <AssemblyName>EzBuildServicesMessaging</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Base.cs" />
+    <Compile Include="ConstructionSites\CreateConstructionSite.cs" />
+    <Compile Include="ConstructionSites\CreateCSDiaryEntry.cs" />
+    <Compile Include="ConstructionSites\DeleteConstructionSite.cs" />
+    <Compile Include="ConstructionSites\DeleteCSDiaryEntry.cs" />
+    <Compile Include="ConstructionSites\GetConstructionSite.cs" />
+    <Compile Include="ConstructionSites\GetConstructionSitesForFirm.cs" />
+    <Compile Include="ConstructionSites\RemoveEmployeeFromConstructionSite.cs" />
+    <Compile Include="ConstructionSites\UpdateConstructionSite.cs" />
+    <Compile Include="ConstructionSites\UpdateConstructionSiteImage.cs" />
+    <Compile Include="ConstructionSites\UpdateCSDiaryEntry.cs" />
+    <Compile Include="ConstructionSites\UpdateCSManager.cs" />
+    <Compile Include="EmployeeHours\CreateEmployeeHoursForDay.cs" />
+    <Compile Include="EmployeeHours\EmployeeHours.cs" />
+    <Compile Include="EmployeeHours\GetEmployeeHoursForCS.cs" />
+    <Compile Include="EmployeeHours\GetEmployeeHoursForFirm.cs" />
+    <Compile Include="EmployeeHours\GetEmployeeHoursMonthForEmployee.cs" />
+    <Compile Include="Employees\CreateEmployee.cs" />
+    <Compile Include="Employees\DeleteEmployee.cs" />
+    <Compile Include="Employees\GetEmployeesForConstructionSite.cs" />
+    <Compile Include="Employees\GetEmployeesForFirm.cs" />
+    <Compile Include="Employees\GetRegisteredEmployeeDetails.cs" />
+    <Compile Include="Employees\GetEngineers.cs" />
+    <Compile Include="Employees\GetUnassignedEmployees.cs" />
+    <Compile Include="Employees\UpdateEmployee.cs" />
+    <Compile Include="Firm\GetFirmName.cs" />
+    <Compile Include="Firm\RegisterFirmAndUser.cs" />
+    <Compile Include="Firm\UpdateFirmName.cs" />
+    <Compile Include="Meetings\CreateMeeting.cs" />
+    <Compile Include="Meetings\DeleteMeeting.cs" />
+    <Compile Include="Meetings\GetMeetingsForEmployee.cs" />
+    <Compile Include="Meetings\UpdateMeeting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ConstructionSiteDiaryEntryVM.cs" />
+    <Compile Include="ViewModels\ConstructionSiteVM.cs" />
+    <Compile Include="ViewModels\EmployeeHoursMonthVM.cs" />
+    <Compile Include="ViewModels\EmployeeHoursVM.cs" />
+    <Compile Include="ViewModels\EmployeeVM.cs" />
+    <Compile Include="ViewModels\EquipmentHistoryVM.cs" />
+    <Compile Include="ViewModels\EquipmentHistoryWarehouseVM.cs" />
+    <Compile Include="ViewModels\EquipmentVM.cs" />
+    <Compile Include="ViewModels\MeetingVM.cs" />
+    <Compile Include="ViewModels\WarehouseVM.cs" />
+    <Compile Include="Warehouse\CreateEquipment.cs" />
+    <Compile Include="Warehouse\CreateEquipmentHistory.cs" />
+    <Compile Include="Warehouse\CreateUpdateWarehouse.cs" />
+    <Compile Include="Warehouse\DeleteEquipment.cs" />
+    <Compile Include="Warehouse\DeleteEquipmentHistory.cs" />
+    <Compile Include="Warehouse\DeleteWarehouse.cs" />
+    <Compile Include="Warehouse\EquipmentHistory.cs" />
+    <Compile Include="Warehouse\GetEquipmentForWarehouse.cs" />
+    <Compile Include="Warehouse\GetEquipmentHistoryForEmployeeAndDate.cs" />
+    <Compile Include="Warehouse\GetEquipmentHistoryForWarehouse.cs" />
+    <Compile Include="Warehouse\GetEquipmentHistoryWarehouse.cs" />
+    <Compile Include="Warehouse\GetWarehouse.cs" />
+    <Compile Include="Warehouse\UpdateEquipment.cs" />
+    <Compile Include="Warehouse\UpdateEquipmentHistory.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

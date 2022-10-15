@@ -1,0 +1,124 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/employees_swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.EmployeesFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:background="@color/very_light_gray"
+        tools:context=".view.fragments.EmployeesFragment">
+
+        <LinearLayout
+            android:id="@+id/ll_employees_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/very_light_gray"
+            android:visibility="gone">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_employees_engineers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:gravity="start"
+                android:textAlignment="gravity"
+                android:textSize="@dimen/_16sdp"
+                android:text="@string/lbl_engineers" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_employees_engineers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_3sdp"/>
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_employees_no_engineers_added"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp"
+                android:text="@string/lbl_no_engineers_added" />
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_employees_physical_workers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:gravity="start"
+                android:textAlignment="gravity"
+                android:textSize="@dimen/_16sdp"
+                android:text="@string/lbl_physical_workers" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_employees_physical_workers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_employees_no_physical_workers_added"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp"
+                android:text="@string/lbl_no_physical_workers_added" />
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_employees_warehouse_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:gravity="start"
+                android:textAlignment="gravity"
+                android:textSize="@dimen/_16sdp"
+                android:text="@string/lbl_warehouse_manager" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_employees_warehouse_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_47sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_employees_no_warehouse_manager_added_yet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp"
+                android:text="@string/lbl_no_warehouse_manager_added" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EzBuildDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ConstructionSite">
+    <Key>
+      <PropertyRef Name="IDConstructionSite" />
+    </Key>
+    <Property Name="IDConstructionSite" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Base64Image" Type="varchar(max)" />
+    <Property Name="FullAddress" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Latitude" Type="decimal" Precision="8" Scale="6" Nullable="false" />
+    <Property Name="Longitude" Type="decimal" Precision="9" Scale="6" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="ConstructionSiteManagerID" Type="int" />
+    <Property Name="FirmID" Type="int" />
+  </EntityType>
+  <EntityType Name="ConstructionSiteDiaryEntry">
+    <Key>
+      <PropertyRef Name="IDConstructionSiteDiary" />
+    </Key>
+    <Property Name="IDConstructionSiteDiary" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DiaryEntry" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DiaryEntryDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="DiaryEntryEmployeeID" Type="int" Nullable="false" />
+    <Property Name="ConstructionSiteID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="IDEmployee" />
+    </Key>
+    <Property Name="IDEmployee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirebaseID" Type="nvarchar" MaxLength="255" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmployeeTypeID" Type="int" Nullable="false" />
+    <Property Name="FirmID" Type="int" Nullable="false" />
+    <Property Name="ConstructionSiteID" Type="int" />
+  </EntityType>
+  <EntityType Name="EmployeeHours">
+    <Key>
+      <PropertyRef Name="IDEmployeeHours" />
+    </Key>
+    <Property Name="IDEmployeeHours" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoursWorked" Type="smallint" Nullable="false" />
+    <Property Name="DateWorkDone" Type="date" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeType">
+    <Key>
+      <PropertyRef Name="IDEmployeeType" />
+    </Key>
+    <Property Name="IDEmployeeType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="IDEquipment" />
+    </Key>
+    <Property Name="IDEquipment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Base64Image" Type="varchar(max)" Nullable="false" />
+    <Property Name="EquipmentName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="EquipmentDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="WarehouseID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentHistory">
+    <Key>
+      <PropertyRef Name="IDEquipmentHistory" />
+    </Key>
+    <Property Name="IDEquipmentHistory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="DateEquipmentTaken" Type="smalldatetime" Nullable="false" />
+    <Property Name="QuantityTaken" Type="int" Nullable="false" />
+    <Property Name="EquipmentID" Type="int" Nullable="false" />
+    <Property Name="WarehouseID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Firm">
+    <Key>
+      <PropertyRef Name="IDFirm" />
+    </Key>
+    <Property Name="IDFirm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="WarehouseID" Type="int" />
+  </EntityType>
+  <EntityType Name="Meeting">
+    <Key>
+      <PropertyRef Name="IDMeeting" />
+    </Key>
+    <Property Name="IDMeeting" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MeetingDate" Type="date" Nullable="false" />
+    <Property Name="MeetingStartTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="MeetingDuration" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MeetingDescription" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="IDWarehouse" />
+    </Key>
+    <Property Name="IDWarehouse" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullAddress" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="WarehouseManagerID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ConstructionSite_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="ConstructionSite" Type="Self.ConstructionSite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="ConstructionSite">
+        <PropertyRef Name="ConstructionSiteManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConstructionSite_Firm">
+    <End Role="Firm" Type="Self.Firm" Multiplicity="0..1" />
+    <End Role="ConstructionSite" Type="Self.ConstructionSite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firm">
+        <PropertyRef Name="IDFirm" />
+      </Principal>
+      <Dependent Role="ConstructionSite">
+        <PropertyRef Name="FirmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConstructionSiteDiaryEntry_ConstructionSite">
+    <End Role="ConstructionSite" Type="Self.ConstructionSite" Multiplicity="1" />
+    <End Role="ConstructionSiteDiaryEntry" Type="Self.ConstructionSiteDiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConstructionSite">
+        <PropertyRef Name="IDConstructionSite" />
+      </Principal>
+      <Dependent Role="ConstructionSiteDiaryEntry">
+        <PropertyRef Name="ConstructionSiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConstructionSiteDiaryEntry_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="ConstructionSiteDiaryEntry" Type="Self.ConstructionSiteDiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="ConstructionSiteDiaryEntry">
+        <PropertyRef Name="DiaryEntryEmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_ConstructionSite">
+    <End Role="ConstructionSite" Type="Self.ConstructionSite" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConstructionSite">
+        <PropertyRef Name="IDConstructionSite" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="ConstructionSiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_EmployeeType">
+    <End Role="EmployeeType" Type="Self.EmployeeType" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeType">
+        <PropertyRef Name="IDEmployeeType" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="EmployeeTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Firm">
+    <End Role="Firm" Type="Self.Firm" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firm">
+        <PropertyRef Name="IDFirm" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="FirmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeHours_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="EmployeeHours" Type="Self.EmployeeHours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="EmployeeHours">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipment_Warehouse">
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="IDWarehouse" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="WarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentHistory_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="EquipmentHistory" Type="Self.EquipmentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="EquipmentHistory">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentHistory_Equipment">
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="1" />
+    <End Role="EquipmentHistory" Type="Self.EquipmentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="IDEquipment" />
+      </Principal>
+      <Dependent Role="EquipmentHistory">
+        <PropertyRef Name="EquipmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentHistory_Warehouse">
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="1" />
+    <End Role="EquipmentHistory" Type="Self.EquipmentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="IDWarehouse" />
+      </Principal>
+      <Dependent Role="EquipmentHistory">
+        <PropertyRef Name="WarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firm_Warehouse">
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="0..1" />
+    <End Role="Firm" Type="Self.Firm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="IDWarehouse" />
+      </Principal>
+      <Dependent Role="Firm">
+        <PropertyRef Name="WarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Meeting_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Meeting" Type="Self.Meeting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="Meeting">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="Warehouse">
+        <PropertyRef Name="WarehouseManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EzBuildDBModelStoreContainer">
+    <EntitySet Name="ConstructionSite" EntityType="Self.ConstructionSite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConstructionSiteDiaryEntry" EntityType="Self.ConstructionSiteDiaryEntry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeHours" EntityType="Self.EmployeeHours" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeType" EntityType="Self.EmployeeType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Equipment" EntityType="Self.Equipment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EquipmentHistory" EntityType="Self.EquipmentHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Firm" EntityType="Self.Firm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meeting" EntityType="Self.Meeting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouse" EntityType="Self.Warehouse" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ConstructionSite_Employee" Association="Self.FK_ConstructionSite_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="ConstructionSite" EntitySet="ConstructionSite" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConstructionSite_Firm" Association="Self.FK_ConstructionSite_Firm">
+      <End Role="Firm" EntitySet="Firm" />
+      <End Role="ConstructionSite" EntitySet="ConstructionSite" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConstructionSiteDiaryEntry_ConstructionSite" Association="Self.FK_ConstructionSiteDiaryEntry_ConstructionSite">
+      <End Role="ConstructionSite" EntitySet="ConstructionSite" />
+      <End Role="ConstructionSiteDiaryEntry" EntitySet="ConstructionSiteDiaryEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConstructionSiteDiaryEntry_Employee" Association="Self.FK_ConstructionSiteDiaryEntry_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="ConstructionSiteDiaryEntry" EntitySet="ConstructionSiteDiaryEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_ConstructionSite" Association="Self.FK_Employee_ConstructionSite">
+      <End Role="ConstructionSite" EntitySet="ConstructionSite" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_EmployeeType" Association="Self.FK_Employee_EmployeeType">
+      <End Role="EmployeeType" EntitySet="EmployeeType" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Firm" Association="Self.FK_Employee_Firm">
+      <End Role="Firm" EntitySet="Firm" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeHours_Employee" Association="Self.FK_EmployeeHours_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="EmployeeHours" EntitySet="EmployeeHours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipment_Warehouse" Association="Self.FK_Equipment_Warehouse">
+      <End Role="Warehouse" EntitySet="Warehouse" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentHistory_Employee" Association="Self.FK_EquipmentHistory_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="EquipmentHistory" EntitySet="EquipmentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentHistory_Equipment" Association="Self.FK_EquipmentHistory_Equipment">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="EquipmentHistory" EntitySet="EquipmentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentHistory_Warehouse" Association="Self.FK_EquipmentHistory_Warehouse">
+      <End Role="Warehouse" EntitySet="Warehouse" />
+      <End Role="EquipmentHistory" EntitySet="EquipmentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firm_Warehouse" Association="Self.FK_Firm_Warehouse">
+      <End Role="Warehouse" EntitySet="Warehouse" />
+      <End Role="Firm" EntitySet="Firm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Meeting_Employee" Association="Self.FK_Meeting_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Meeting" EntitySet="Meeting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_Employee" Association="Self.FK_Warehouse_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Warehouse" EntitySet="Warehouse" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

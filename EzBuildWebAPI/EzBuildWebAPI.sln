@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EzBuildWebAPI", "EzBuildWebAPI\EzBuildWebAPI.csproj", "{C3A42DDB-8623-444F-BEC9-5E2D07DE90D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{A9242812-822C-4236-800C-731B58E87E04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Layer", "Data Access Layer", "{F8BFF195-5D33-4B9A-B4F1-81CD0DE4FC94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{EDE482D1-BB18-4B2B-975B-91A35DAEC12D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EzBuildDataAccess", "EzBuildDataAccess\EzBuildDataAccess.csproj", "{0402DFE8-857F-4758-B362-1638A2A826B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EzBuildServices", "EzBuildServices\EzBuildServices.csproj", "{696E519E-026F-46DA-B565-3F456FC72AD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EzBuildServicesMessaging", "EzBuildServicesMessaging\EzBuildServicesMessaging.csproj", "{FF7AAC08-AB81-440A-B984-5670DFD28378}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3A42DDB-8623-444F-BEC9-5E2D07DE90D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3A42DDB-8623-444F-BEC9-5E2D07DE90D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3A42DDB-8623-444F-BEC9-5E2D07DE90D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3A42DDB-8623-444F-BEC9-5E2D07DE90D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0402DFE8-857F-4758-B362-1638A2A826B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0402DFE8-857F-4758-B362-1638A2A826B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0402DFE8-857F-4758-B362-1638A2A826B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0402DFE8-857F-4758-B362-1638A2A826B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{696E519E-026F-46DA-B565-3F456FC72AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696E519E-026F-46DA-B565-3F456FC72AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696E519E-026F-46DA-B565-3F456FC72AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696E519E-026F-46DA-B565-3F456FC72AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF7AAC08-AB81-440A-B984-5670DFD28378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7AAC08-AB81-440A-B984-5670DFD28378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7AAC08-AB81-440A-B984-5670DFD28378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7AAC08-AB81-440A-B984-5670DFD28378}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C3A42DDB-8623-444F-BEC9-5E2D07DE90D2} = {A9242812-822C-4236-800C-731B58E87E04}
+		{0402DFE8-857F-4758-B362-1638A2A826B4} = {F8BFF195-5D33-4B9A-B4F1-81CD0DE4FC94}
+		{696E519E-026F-46DA-B565-3F456FC72AD8} = {EDE482D1-BB18-4B2B-975B-91A35DAEC12D}
+		{FF7AAC08-AB81-440A-B984-5670DFD28378} = {EDE482D1-BB18-4B2B-975B-91A35DAEC12D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B219195-C38C-4E24-926B-3C5B921E984A}
+	EndGlobalSection
+EndGlobal

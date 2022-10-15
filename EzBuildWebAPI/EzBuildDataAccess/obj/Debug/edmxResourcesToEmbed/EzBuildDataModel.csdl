@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EzBuildDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EzBuildDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ConstructionSites" EntityType="EzBuildDBModel.ConstructionSite" />
+    <EntitySet Name="ConstructionSiteDiaryEntries" EntityType="EzBuildDBModel.ConstructionSiteDiaryEntry" />
+    <EntitySet Name="Employees" EntityType="EzBuildDBModel.Employee" />
+    <EntitySet Name="EmployeeHours" EntityType="EzBuildDBModel.EmployeeHour" />
+    <EntitySet Name="EmployeeTypes" EntityType="EzBuildDBModel.EmployeeType" />
+    <EntitySet Name="Equipments" EntityType="EzBuildDBModel.Equipment" />
+    <EntitySet Name="EquipmentHistories" EntityType="EzBuildDBModel.EquipmentHistory" />
+    <EntitySet Name="Firms" EntityType="EzBuildDBModel.Firm" />
+    <EntitySet Name="Meetings" EntityType="EzBuildDBModel.Meeting" />
+    <EntitySet Name="sysdiagrams" EntityType="EzBuildDBModel.sysdiagram" />
+    <EntitySet Name="Warehouses" EntityType="EzBuildDBModel.Warehouse" />
+    <AssociationSet Name="FK_ConstructionSite_Employee" Association="EzBuildDBModel.FK_ConstructionSite_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="ConstructionSite" EntitySet="ConstructionSites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConstructionSite_Firm" Association="EzBuildDBModel.FK_ConstructionSite_Firm">
+      <End Role="Firm" EntitySet="Firms" />
+      <End Role="ConstructionSite" EntitySet="ConstructionSites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConstructionSiteDiaryEntry_ConstructionSite" Association="EzBuildDBModel.FK_ConstructionSiteDiaryEntry_ConstructionSite">
+      <End Role="ConstructionSite" EntitySet="ConstructionSites" />
+      <End Role="ConstructionSiteDiaryEntry" EntitySet="ConstructionSiteDiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_ConstructionSite" Association="EzBuildDBModel.FK_Employee_ConstructionSite">
+      <End Role="ConstructionSite" EntitySet="ConstructionSites" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConstructionSiteDiaryEntry_Employee" Association="EzBuildDBModel.FK_ConstructionSiteDiaryEntry_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="ConstructionSiteDiaryEntry" EntitySet="ConstructionSiteDiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_EmployeeType" Association="EzBuildDBModel.FK_Employee_EmployeeType">
+      <End Role="EmployeeType" EntitySet="EmployeeTypes" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Firm" Association="EzBuildDBModel.FK_Employee_Firm">
+      <End Role="Firm" EntitySet="Firms" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeHours_Employee" Association="EzBuildDBModel.FK_EmployeeHours_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="EmployeeHour" EntitySet="EmployeeHours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentHistory_Employee" Association="EzBuildDBModel.FK_EquipmentHistory_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="EquipmentHistory" EntitySet="EquipmentHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Meeting_Employee" Association="EzBuildDBModel.FK_Meeting_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Meeting" EntitySet="Meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_Employee" Association="EzBuildDBModel.FK_Warehouse_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Warehouse" EntitySet="Warehouses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipment_Warehouse" Association="EzBuildDBModel.FK_Equipment_Warehouse">
+      <End Role="Warehouse" EntitySet="Warehouses" />
+      <End Role="Equipment" EntitySet="Equipments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentHistory_Equipment" Association="EzBuildDBModel.FK_EquipmentHistory_Equipment">
+      <End Role="Equipment" EntitySet="Equipments" />
+      <End Role="EquipmentHistory" EntitySet="EquipmentHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentHistory_Warehouse" Association="EzBuildDBModel.FK_EquipmentHistory_Warehouse">
+      <End Role="Warehouse" EntitySet="Warehouses" />
+      <End Role="EquipmentHistory" EntitySet="EquipmentHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firm_Warehouse" Association="EzBuildDBModel.FK_Firm_Warehouse">
+      <End Role="Warehouse" EntitySet="Warehouses" />
+      <End Role="Firm" EntitySet="Firms" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ConstructionSite">
+    <Key>
+      <PropertyRef Name="IDConstructionSite" />
+    </Key>
+    <Property Name="IDConstructionSite" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Base64Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FullAddress" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Decimal" Nullable="false" Precision="8" Scale="6" />
+    <Property Name="Longitude" Type="Decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ConstructionSiteManagerID" Type="Int32" />
+    <Property Name="FirmID" Type="Int32" />
+    <NavigationProperty Name="Employee" Relationship="EzBuildDBModel.FK_ConstructionSite_Employee" FromRole="ConstructionSite" ToRole="Employee" />
+    <NavigationProperty Name="Firm" Relationship="EzBuildDBModel.FK_ConstructionSite_Firm" FromRole="ConstructionSite" ToRole="Firm" />
+    <NavigationProperty Name="ConstructionSiteDiaryEntries" Relationship="EzBuildDBModel.FK_ConstructionSiteDiaryEntry_ConstructionSite" FromRole="ConstructionSite" ToRole="ConstructionSiteDiaryEntry" />
+    <NavigationProperty Name="Employees" Relationship="EzBuildDBModel.FK_Employee_ConstructionSite" FromRole="ConstructionSite" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="ConstructionSiteDiaryEntry">
+    <Key>
+      <PropertyRef Name="IDConstructionSiteDiary" />
+    </Key>
+    <Property Name="IDConstructionSiteDiary" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DiaryEntry" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DiaryEntryDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DiaryEntryEmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="ConstructionSiteID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ConstructionSite" Relationship="EzBuildDBModel.FK_ConstructionSiteDiaryEntry_ConstructionSite" FromRole="ConstructionSiteDiaryEntry" ToRole="ConstructionSite" />
+    <NavigationProperty Name="Employee" Relationship="EzBuildDBModel.FK_ConstructionSiteDiaryEntry_Employee" FromRole="ConstructionSiteDiaryEntry" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="IDEmployee" />
+    </Key>
+    <Property Name="IDEmployee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirebaseID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeTypeID" Type="Int32" Nullable="false" />
+    <Property Name="FirmID" Type="Int32" Nullable="false" />
+    <Property Name="ConstructionSiteID" Type="Int32" />
+    <NavigationProperty Name="ConstructionSites" Relationship="EzBuildDBModel.FK_ConstructionSite_Employee" FromRole="Employee" ToRole="ConstructionSite" />
+    <NavigationProperty Name="ConstructionSite" Relationship="EzBuildDBModel.FK_Employee_ConstructionSite" FromRole="Employee" ToRole="ConstructionSite" />
+    <NavigationProperty Name="ConstructionSiteDiaryEntries" Relationship="EzBuildDBModel.FK_ConstructionSiteDiaryEntry_Employee" FromRole="Employee" ToRole="ConstructionSiteDiaryEntry" />
+    <NavigationProperty Name="EmployeeType" Relationship="EzBuildDBModel.FK_Employee_EmployeeType" FromRole="Employee" ToRole="EmployeeType" />
+    <NavigationProperty Name="Firm" Relationship="EzBuildDBModel.FK_Employee_Firm" FromRole="Employee" ToRole="Firm" />
+    <NavigationProperty Name="EmployeeHours" Relationship="EzBuildDBModel.FK_EmployeeHours_Employee" FromRole="Employee" ToRole="EmployeeHour" />
+    <NavigationProperty Name="EquipmentHistories" Relationship="EzBuildDBModel.FK_EquipmentHistory_Employee" FromRole="Employee" ToRole="EquipmentHistory" />
+    <NavigationProperty Name="Meetings" Relationship="EzBuildDBModel.FK_Meeting_Employee" FromRole="Employee" ToRole="Meeting" />
+    <NavigationProperty Name="Warehouses" Relationship="EzBuildDBModel.FK_Warehouse_Employee" FromRole="Employee" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="EmployeeHour">
+    <Key>
+      <PropertyRef Name="IDEmployeeHours" />
+    </Key>
+    <Property Name="IDEmployeeHours" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoursWorked" Type="Int16" Nullable="false" />
+    <Property Name="DateWorkDone" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="EzBuildDBModel.FK_EmployeeHours_Employee" FromRole="EmployeeHour" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="EmployeeType">
+    <Key>
+      <PropertyRef Name="IDEmployeeType" />
+    </Key>
+    <Property Name="IDEmployeeType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeType1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employees" Relationship="EzBuildDBModel.FK_Employee_EmployeeType" FromRole="EmployeeType" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="IDEquipment" />
+    </Key>
+    <Property Name="IDEquipment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Base64Image" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EquipmentName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="EquipmentDescription" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WarehouseID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Warehouse" Relationship="EzBuildDBModel.FK_Equipment_Warehouse" FromRole="Equipment" ToRole="Warehouse" />
+    <NavigationProperty Name="EquipmentHistories" Relationship="EzBuildDBModel.FK_EquipmentHistory_Equipment" FromRole="Equipment" ToRole="EquipmentHistory" />
+  </EntityType>
+  <EntityType Name="EquipmentHistory">
+    <Key>
+      <PropertyRef Name="IDEquipmentHistory" />
+    </Key>
+    <Property Name="IDEquipmentHistory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="DateEquipmentTaken" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="QuantityTaken" Type="Int32" Nullable="false" />
+    <Property Name="EquipmentID" Type="Int32" Nullable="false" />
+    <Property Name="WarehouseID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="EzBuildDBModel.FK_EquipmentHistory_Employee" FromRole="EquipmentHistory" ToRole="Employee" />
+    <NavigationProperty Name="Equipment" Relationship="EzBuildDBModel.FK_EquipmentHistory_Equipment" FromRole="EquipmentHistory" ToRole="Equipment" />
+    <NavigationProperty Name="Warehouse" Relationship="EzBuildDBModel.FK_EquipmentHistory_Warehouse" FromRole="EquipmentHistory" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="Firm">
+    <Key>
+      <PropertyRef Name="IDFirm" />
+    </Key>
+    <Property Name="IDFirm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirmName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WarehouseID" Type="Int32" />
+    <NavigationProperty Name="ConstructionSites" Relationship="EzBuildDBModel.FK_ConstructionSite_Firm" FromRole="Firm" ToRole="ConstructionSite" />
+    <NavigationProperty Name="Employees" Relationship="EzBuildDBModel.FK_Employee_Firm" FromRole="Firm" ToRole="Employee" />
+    <NavigationProperty Name="Warehouse" Relationship="EzBuildDBModel.FK_Firm_Warehouse" FromRole="Firm" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="Meeting">
+    <Key>
+      <PropertyRef Name="IDMeeting" />
+    </Key>
+    <Property Name="IDMeeting" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MeetingDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MeetingStartTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="MeetingDuration" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MeetingDescription" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="EzBuildDBModel.FK_Meeting_Employee" FromRole="Meeting" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="IDWarehouse" />
+    </Key>
+    <Property Name="IDWarehouse" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullAddress" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="WarehouseManagerID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="EzBuildDBModel.FK_Warehouse_Employee" FromRole="Warehouse" ToRole="Employee" />
+    <NavigationProperty Name="Equipments" Relationship="EzBuildDBModel.FK_Equipment_Warehouse" FromRole="Warehouse" ToRole="Equipment" />
+    <NavigationProperty Name="EquipmentHistories" Relationship="EzBuildDBModel.FK_EquipmentHistory_Warehouse" FromRole="Warehouse" ToRole="EquipmentHistory" />
+    <NavigationProperty Name="Firms" Relationship="EzBuildDBModel.FK_Firm_Warehouse" FromRole="Warehouse" ToRole="Firm" />
+  </EntityType>
+  <Association Name="FK_ConstructionSite_Employee">
+    <End Type="EzBuildDBModel.Employee" Role="Employee" Multiplicity="0..1" />
+    <End Type="EzBuildDBModel.ConstructionSite" Role="ConstructionSite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="ConstructionSite">
+        <PropertyRef Name="ConstructionSiteManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConstructionSite_Firm">
+    <End Type="EzBuildDBModel.Firm" Role="Firm" Multiplicity="0..1" />
+    <End Type="EzBuildDBModel.ConstructionSite" Role="ConstructionSite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firm">
+        <PropertyRef Name="IDFirm" />
+      </Principal>
+      <Dependent Role="ConstructionSite">
+        <PropertyRef Name="FirmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConstructionSiteDiaryEntry_ConstructionSite">
+    <End Type="EzBuildDBModel.ConstructionSite" Role="ConstructionSite" Multiplicity="1" />
+    <End Type="EzBuildDBModel.ConstructionSiteDiaryEntry" Role="ConstructionSiteDiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConstructionSite">
+        <PropertyRef Name="IDConstructionSite" />
+      </Principal>
+      <Dependent Role="ConstructionSiteDiaryEntry">
+        <PropertyRef Name="ConstructionSiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_ConstructionSite">
+    <End Type="EzBuildDBModel.ConstructionSite" Role="ConstructionSite" Multiplicity="0..1" />
+    <End Type="EzBuildDBModel.Employee" Role="Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConstructionSite">
+        <PropertyRef Name="IDConstructionSite" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="ConstructionSiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConstructionSiteDiaryEntry_Employee">
+    <End Type="EzBuildDBModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="EzBuildDBModel.ConstructionSiteDiaryEntry" Role="ConstructionSiteDiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="ConstructionSiteDiaryEntry">
+        <PropertyRef Name="DiaryEntryEmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_EmployeeType">
+    <End Type="EzBuildDBModel.EmployeeType" Role="EmployeeType" Multiplicity="1" />
+    <End Type="EzBuildDBModel.Employee" Role="Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeType">
+        <PropertyRef Name="IDEmployeeType" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="EmployeeTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Firm">
+    <End Type="EzBuildDBModel.Firm" Role="Firm" Multiplicity="1" />
+    <End Type="EzBuildDBModel.Employee" Role="Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firm">
+        <PropertyRef Name="IDFirm" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="FirmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeHours_Employee">
+    <End Type="EzBuildDBModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="EzBuildDBModel.EmployeeHour" Role="EmployeeHour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="EmployeeHour">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentHistory_Employee">
+    <End Type="EzBuildDBModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="EzBuildDBModel.EquipmentHistory" Role="EquipmentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="EquipmentHistory">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Meeting_Employee">
+    <End Type="EzBuildDBModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="EzBuildDBModel.Meeting" Role="Meeting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="Meeting">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_Employee">
+    <End Type="EzBuildDBModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="EzBuildDBModel.Warehouse" Role="Warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="IDEmployee" />
+      </Principal>
+      <Dependent Role="Warehouse">
+        <PropertyRef Name="WarehouseManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipment_Warehouse">
+    <End Type="EzBuildDBModel.Warehouse" Role="Warehouse" Multiplicity="1" />
+    <End Type="EzBuildDBModel.Equipment" Role="Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="IDWarehouse" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="WarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentHistory_Equipment">
+    <End Type="EzBuildDBModel.Equipment" Role="Equipment" Multiplicity="1" />
+    <End Type="EzBuildDBModel.EquipmentHistory" Role="EquipmentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="IDEquipment" />
+      </Principal>
+      <Dependent Role="EquipmentHistory">
+        <PropertyRef Name="EquipmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentHistory_Warehouse">
+    <End Type="EzBuildDBModel.Warehouse" Role="Warehouse" Multiplicity="1" />
+    <End Type="EzBuildDBModel.EquipmentHistory" Role="EquipmentHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="IDWarehouse" />
+      </Principal>
+      <Dependent Role="EquipmentHistory">
+        <PropertyRef Name="WarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firm_Warehouse">
+    <End Type="EzBuildDBModel.Warehouse" Role="Warehouse" Multiplicity="0..1" />
+    <End Type="EzBuildDBModel.Firm" Role="Firm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="IDWarehouse" />
+      </Principal>
+      <Dependent Role="Firm">
+        <PropertyRef Name="WarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

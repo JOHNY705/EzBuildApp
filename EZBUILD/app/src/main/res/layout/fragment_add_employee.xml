@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".view.fragments.EmployeeDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_user_image"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_gravity="top|center"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_110sdp">
+
+            <ImageView
+                android:id="@+id/iv_user_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/image_contentDescription"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_employee_person" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:background="@drawable/user_image_background" />
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_add_employee_full_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/et_hint_full_name"
+            android:textColorHint="@color/color_secondary_text">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildEditText
+                android:id="@+id/et_add_employee_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/_13sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                tools:text="Pero Peric" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_add_employee_type"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/et_hint_employee_type"
+            android:textColorHint="@color/color_secondary_text">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildEditText
+                android:id="@+id/et_add_employee_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/_13sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                tools:text="Inženjer" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_add_employee_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/et_hint_email"
+            android:textColorHint="@color/color_secondary_text">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildEditText
+                android:id="@+id/et_add_employee_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="@dimen/_13sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                tools:text="peroperic@gmail.com" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_add_employee_phone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/et_hint_phone"
+            android:textColorHint="@color/color_secondary_text">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildEditText
+                android:id="@+id/et_add_employee_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="@dimen/_13sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                tools:text="098 1234 567" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_add_employee_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/et_hint_password"
+            android:textColorHint="@color/color_secondary_text">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildEditText
+                android:id="@+id/et_add_employee_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:padding="@dimen/_13sdp"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"
+                tools:text="123456"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_add_employee_confirm_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/et_hint_confirm_password"
+            android:textColorHint="@color/color_secondary_text">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildEditText
+                android:id="@+id/et_add_employee_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:padding="@dimen/_13sdp"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"
+                tools:text="123456"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildButton
+            android:id="@+id/btn_add_employee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/button_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/btn_lbl_add_employee"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+    </LinearLayout>
+
+</ScrollView>

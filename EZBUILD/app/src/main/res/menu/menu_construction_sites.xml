@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_view_construction_sites_on_map"
+        android:icon="@drawable/ic_map"
+        android:title="@string/navigation_title_map_construction_site"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_add_construction_site"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add_construction_site"
+        app:showAsAction="always"/>
+</menu>

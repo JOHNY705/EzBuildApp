@@ -1,0 +1,17 @@
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EzBuildDataAccess.dll.config
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EzBuildDataAccess.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EzBuildDataAccess.pdb
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EzBuildServicesMessaging.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EzBuildServicesMessaging.pdb
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EzBuildServicesMessaging.dll.config
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\obj\Debug\EzBuildDataAccess.csproj.AssemblyReference.cache
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\obj\Debug\EzBuildDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\obj\Debug\EzBuildDataAccess.csproj.CopyComplete
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\obj\Debug\EzBuildDataAccess.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildDataAccess\obj\Debug\EzBuildDataAccess.pdb

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/tv_dialog_custom_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        tools:text="Dialog Title"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dialog_custom_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <hr.itrojnar.ezbuild.utils.EzBuildTextView
+        android:id="@+id/tv_custom_list_no_more_unassigned_employees"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:ellipsize="none"
+        android:scrollHorizontally="false"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:text="@string/lbl_no_more_unassigned_employees"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        android:breakStrategy="simple"
+        android:maxLines="2"
+        android:visibility="gone" />
+
+    
+</LinearLayout>

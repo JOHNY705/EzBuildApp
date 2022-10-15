@@ -1,0 +1,14 @@
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\bin\Debug\EzBuildServicesMessaging.dll.config
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\bin\Debug\EzBuildServicesMessaging.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\bin\Debug\EzBuildServicesMessaging.pdb
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\bin\Debug\EntityFramework.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\bin\Debug\EntityFramework.xml
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\obj\Debug\EzBuildServicesMessaging.csproj.AssemblyReference.cache
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\obj\Debug\EzBuildServicesMessaging.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\obj\Debug\EzBuildServicesMessaging.csproj.CopyComplete
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\obj\Debug\EzBuildServicesMessaging.dll
+C:\Users\Ivan\Desktop\Zavrsni\EzBuildWebAPI\EzBuildServicesMessaging\obj\Debug\EzBuildServicesMessaging.pdb

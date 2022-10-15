@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@color/very_light_gray"
+    tools:context=".view.fragments.EmployeeDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_user_image"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_gravity="top|center"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp">
+
+            <ImageView
+                android:id="@+id/iv_user_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/image_contentDescription"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_employee_person" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:background="@drawable/user_image_background" />
+        </FrameLayout>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/lbl_employee_name_and_surname"
+            android:textSize="@dimen/_15sdp"/>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextView
+            android:id="@+id/tv_employee_details_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            tools:text="Pero Peric" />
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/lbl_employee_type"
+            android:textSize="@dimen/_15sdp"/>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextView
+            android:id="@+id/tv_employee_details_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            tools:text="Fizički radnik" />
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/lbl_employee_email"
+            android:textSize="@dimen/_15sdp"/>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextView
+            android:id="@+id/tv_employee_details_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:text="@string/lbl_user_has_no_given_email"
+            tools:text="@string/lbl_user_has_no_given_email" />
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/lbl_employee_phone_number"
+            android:textSize="@dimen/_15sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_employee_details_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:text="@string/lbl_user_has_no_given_email"
+                tools:text="098 1234 569" />
+
+            <ImageView
+                android:id="@+id/iv_call_employee"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:contentDescription="@string/image_contentDescription"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_phone"/>
+        </LinearLayout>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+            android:id="@+id/tv_employee_construction_site_employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/lbl_employee_construction_sites"
+            android:textSize="@dimen/_15sdp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_employee_details_construction_sites"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextView
+            android:id="@+id/tv_employee_details_no_cs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible"
+            android:text="@string/lbl_employee_details_no_construction_sites" />
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/lbl_employee_details_work_hours"
+            android:textSize="@dimen/_15sdp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_employee_details_work_hours_month"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextView
+            android:id="@+id/tv_employee_details_no_work_hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible"
+            android:text="@string/lbl_employee_details_no_work_hours" />
+
+    </LinearLayout>
+
+</ScrollView>

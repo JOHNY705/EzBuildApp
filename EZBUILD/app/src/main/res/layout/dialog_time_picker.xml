@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_time_picker_outline"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_time_picker"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp" />
+
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:gravity="center_horizontal">
+
+        <hr.itrojnar.ezbuild.utils.EzBuildButton
+            android:id="@+id/btn_time_picker_confirm"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:text="@string/btn_confirm"/>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildButton
+            android:id="@+id/btn_time_picker_cancel"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:text="@string/btn_cancel"/>
+
+    </LinearLayout>
+</LinearLayout>

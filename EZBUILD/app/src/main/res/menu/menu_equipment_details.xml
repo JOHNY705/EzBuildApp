@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_equipment_details_edit"
+        android:icon="@drawable/ic_edit_24"
+        android:title="@string/edit_equipment"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_equipment_details_delete"
+        android:icon="@drawable/ic_delete_24"
+        android:title="@string/title_delete_construction_site"
+        app:showAsAction="always"/>
+</menu>

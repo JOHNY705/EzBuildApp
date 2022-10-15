@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragments.AddWarehouseFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_edit_warehouse_address"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:hint="@string/et_hint_warehouse_address"
+        android:textColorHint="@color/color_secondary_text">
+
+        <hr.itrojnar.ezbuild.utils.EzBuildEditText
+            android:id="@+id/et_edit_warehouse_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_edit_warehouse_manager"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:hint="@string/et_hint_warehouse_manager"
+        android:textColorHint="@color/color_secondary_text">
+
+        <hr.itrojnar.ezbuild.utils.EzBuildEditText
+            android:id="@+id/et_edit_warehouse_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:padding="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <hr.itrojnar.ezbuild.utils.EzBuildButton
+        android:id="@+id/btn_edit_save_warehouse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/button_background"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="@string/btn_lbl_save_changes"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp" />
+
+</LinearLayout>

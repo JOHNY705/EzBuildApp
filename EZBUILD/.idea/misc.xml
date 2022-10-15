@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/button_background.xml" value="0.2625" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/button_remove_hours_background.xml" value="0.2985" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/custom_background_rv_item.xml" value="0.2205" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/custom_blue_background.xml" value="0.2985" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/custom_dialog_rounded_background.xml" value="0.308" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/dialog_equipment_outline.xml" value="0.3025" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/dialog_time_picker_outline.xml" value="0.3025" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_add_20.xml" value="0.2" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_add_a_photo.xml" value="0.3035" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_baseline_warehouse_24.xml" value="0.3025" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_camera.xml" value="0.3035" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_construction_building.xml" value="0.2985" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_edit.xml" value="0.3035" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_employee_person.xml" value="0.2205" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2205" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_image.xml" value="0.3035" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_location_24.xml" value="0.264" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_location_cs.xml" value="0.223" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_phone.xml" value="0.3055" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/ic_remove.xml" value="0.2205" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/item_grey_border_background.xml" value="0.2205" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/layout_bg.xml" value="0.303" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/small_button_background.xml" value="0.2205" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/splash_screen_background.xml" value="0.2625" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/drawable/user_image_background.xml" value="0.2985" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/activity_construction_site_map.xml" value="0.39010416666666664" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/activity_forgot_password.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/activity_main.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/activity_main2.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/activity_splash.xml" value="0.19655521783181357" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/content_main.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/dialog_change_password.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/dialog_custom_image_selection.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/dialog_custom_list.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/dialog_equipment.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/dialog_progress.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/dialog_time_picker.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_add_construction_site.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_add_diary_entry.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_add_edit_employee.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_add_employee.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_add_equipment.xml" value="0.264" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_add_meeting.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_add_warehouse.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_change_password.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_construction_site_details.xml" value="0.4" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_construction_site_map.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_construction_sites.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_dashboard.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_edit_construction_site.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_edit_diary_entry.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_edit_employee.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_edit_equipment.xml" value="0.24479166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_edit_leased_equipment.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_edit_meeting.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_edit_profile.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_edit_warehouse.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_employee_details.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_employee_hours_for_construction_site.xml" value="0.264" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_employee_hours_for_employee_types.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_employee_hours_menu.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_employees.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_equipment.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_equipment_details.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_equipment_leased.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_leased_equipment_details.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_login.xml" value="0.40217391304347827" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_maps.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_meetings.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_new_lease_equipment.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_profile.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_register.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_warehouse.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/fragment_work_hours.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_construction_site_diary_entry.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_construction_site_layout.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_cs_details_assigned_employees_list.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_custom_list.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_employee_hours_employee_day_layout.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_employee_layout.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_equipment_layout.xml" value="0.536" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_equipment_lease_item_layout.xml" value="0.6" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_equipment_leased_details_layout.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_equipment_leased_layout.xml" value="0.4" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_meeting_layout.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_unassigned_employee_layout.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_unnassigned_employee_layout.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_work_hours_employee_day_layout.xml" value="0.536" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/item_work_hours_month_layout.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/layout_bg.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/layout/nav_header.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/activity_main_drawer.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/bottom_nav_menu.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/bottom_nav_menu_engineer.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/bottom_nav_menu_warehouse_manager.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_construction_site_adapter.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_construction_site_details.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_construction_sites.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_diary_entry_adapter.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_employee_adapter.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_employee_details.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_employees.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_equipment.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_equipment_adapter.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_equipment_details.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_equipment_leased_adapter.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_leased_equipment.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_leased_equipment_details.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_meeting_adapter.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_meetings.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_profile.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/menu_warehouse.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/nav_drawer_menu.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/nav_drawer_menu_engineer.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Ivan/Desktop/Zavrsni/EZBUILD/app/src/main/res/menu/nav_drawer_menu_warehouse_engineer.xml" value="0.4041666666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

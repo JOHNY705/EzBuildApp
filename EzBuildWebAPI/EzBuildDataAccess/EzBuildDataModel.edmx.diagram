@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="090852dbbfb34aab98e33bd59d0cbfb3" Name="Diagram1">
+        <EntityTypeShape EntityType="EzBuildDBModel.ConstructionSite" Width="1.5" PointX="9.75" PointY="10.25" />
+        <EntityTypeShape EntityType="EzBuildDBModel.ConstructionSiteDiaryEntry" Width="1.5" PointX="12" PointY="10.125" />
+        <EntityTypeShape EntityType="EzBuildDBModel.Employee" Width="1.5" PointX="3" PointY="9.125" />
+        <EntityTypeShape EntityType="EzBuildDBModel.EmployeeHour" Width="1.5" PointX="5.25" PointY="5.625" />
+        <EntityTypeShape EntityType="EzBuildDBModel.EmployeeType" Width="1.5" PointX="0.75" PointY="10.5" />
+        <EntityTypeShape EntityType="EzBuildDBModel.Equipment" Width="1.5" PointX="7.5" PointY="15.25" />
+        <EntityTypeShape EntityType="EzBuildDBModel.EquipmentHistory" Width="1.5" PointX="9.75" PointY="15.125" />
+        <EntityTypeShape EntityType="EzBuildDBModel.Firm" Width="1.5" PointX="7.5" PointY="12.375" />
+        <EntityTypeShape EntityType="EzBuildDBModel.Meeting" Width="1.5" PointX="5.25" PointY="22.125" />
+        <EntityTypeShape EntityType="EzBuildDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EzBuildDBModel.Warehouse" Width="1.5" PointX="5.25" PointY="13.875" />
+        <AssociationConnector Association="EzBuildDBModel.FK_ConstructionSite_Employee" />
+        <AssociationConnector Association="EzBuildDBModel.FK_ConstructionSite_Firm" />
+        <AssociationConnector Association="EzBuildDBModel.FK_ConstructionSiteDiaryEntry_ConstructionSite" />
+        <AssociationConnector Association="EzBuildDBModel.FK_Employee_ConstructionSite" />
+        <AssociationConnector Association="EzBuildDBModel.FK_ConstructionSiteDiaryEntry_Employee" />
+        <AssociationConnector Association="EzBuildDBModel.FK_Employee_EmployeeType" />
+        <AssociationConnector Association="EzBuildDBModel.FK_Employee_Firm" />
+        <AssociationConnector Association="EzBuildDBModel.FK_EmployeeHours_Employee" />
+        <AssociationConnector Association="EzBuildDBModel.FK_EquipmentHistory_Employee" />
+        <AssociationConnector Association="EzBuildDBModel.FK_Meeting_Employee" />
+        <AssociationConnector Association="EzBuildDBModel.FK_Warehouse_Employee" />
+        <AssociationConnector Association="EzBuildDBModel.FK_Equipment_Warehouse" />
+        <AssociationConnector Association="EzBuildDBModel.FK_EquipmentHistory_Equipment" />
+        <AssociationConnector Association="EzBuildDBModel.FK_EquipmentHistory_Warehouse" />
+        <AssociationConnector Association="EzBuildDBModel.FK_Firm_Warehouse" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

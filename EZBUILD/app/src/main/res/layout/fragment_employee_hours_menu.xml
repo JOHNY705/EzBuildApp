@@ -1,0 +1,129 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/eh_swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.fragments.EmployeeHoursMenuFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:background="@color/very_light_gray"
+        tools:context=".view.fragments.ConstructionSitesFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/very_light_gray">
+
+            <LinearLayout
+                android:id="@+id/ll_employee_hours_menu_employees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:gravity="start"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_16sdp"
+                    android:text="@string/lbl_work_hours_employees" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_work_hours_engineers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/btn_lbl_engineers"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <hr.itrojnar.ezbuild.utils.EzBuildButton
+                    android:id="@+id/btn_work_hours_physical_workers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/button_background"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/btn_lbl_physical_workers"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <hr.itrojnar.ezbuild.utils.EzBuildButton
+                    android:id="@+id/btn_work_hours_warehouse_manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/button_background"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/btn_lbl_warehouse_manager"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:gravity="start"
+                android:textAlignment="gravity"
+                android:textSize="@dimen/_16sdp"
+                android:text="@string/lbl_work_hours_cs" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_work_hours_construction_sites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_47sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_3sdp"/>
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_work_hours_no_construction_sites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                android:text="@string/lbl_no_construction_sites_available" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

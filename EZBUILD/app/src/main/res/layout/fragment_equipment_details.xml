@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@color/very_light_gray"
+    tools:context=".view.fragments.AddConstructionSiteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_equipment_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220sdp">
+
+            <ImageView
+                android:id="@+id/iv_equipment_details_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cs_image_background"
+                android:contentDescription="@string/image_contentDescription"
+                android:scaleType="fitXY" />
+        </FrameLayout>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/lbl_equipment_name"
+            android:textSize="@dimen/_15sdp" />
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextView
+            android:id="@+id/tv_equipment_details_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            tools:text="Neki naziv opreme" />
+
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/lbl_equipment_available_quantity"
+            android:textSize="@dimen/_15sdp" />
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextView
+            android:id="@+id/tv_equipment_details_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            tools:text="5" />
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/lbl_equipment_description"
+            android:textSize="@dimen/_15sdp"/>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildTextView
+            android:id="@+id/tv_equipment_details_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            tools:text="Testni opis" />
+
+    </LinearLayout>
+</ScrollView>

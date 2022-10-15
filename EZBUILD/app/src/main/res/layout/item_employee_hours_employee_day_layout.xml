@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_1sdp"
+    android:layout_marginStart="@dimen/_6sdp"
+    android:layout_marginEnd="@dimen/_6sdp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="start">
+
+                <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_15sdp"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="@string/lbl_employee"/>
+
+                <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                    android:id="@+id/tv_item_employee_hours_employee_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="start"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    tools:text="Pero Peric Ala deerer er"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:textSize="@dimen/_12sdp"
+                android:text="@string/lbl_work_hours_done"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ib_remove_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:tint="@color/primary_color"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_remove_24"/>
+
+                <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                    android:id="@+id/tv_item_work_hours_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_grey_border_background"
+                    android:gravity="start"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    tools:text="8"/>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ib_add_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:background="@android:color/transparent"
+                    android:tint="@color/primary_color"
+                    android:src="@drawable/ic_add"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_5sdp">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildButton
+                android:id="@+id/btn_add_8_hours"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:drawableStart="@drawable/ic_add_20"
+                android:gravity="center_vertical"
+                android:text="@string/_8"
+                android:padding="0dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/white"
+                android:background="@drawable/small_button_background"/>
+
+            <hr.itrojnar.ezbuild.utils.EzBuildButton
+                android:id="@+id/btn_remove_8_hours"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:drawableStart="@drawable/ic_remove_20"
+                android:gravity="center_vertical"
+                android:text="@string/_8"
+                android:padding="0dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_remove_hours_background"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

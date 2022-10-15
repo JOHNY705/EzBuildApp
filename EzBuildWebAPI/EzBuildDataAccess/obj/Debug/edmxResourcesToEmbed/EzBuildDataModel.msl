@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EzBuildDBModelStoreContainer" CdmEntityContainer="EzBuildDBEntities">
+    <EntitySetMapping Name="ConstructionSites">
+      <EntityTypeMapping TypeName="EzBuildDBModel.ConstructionSite">
+        <MappingFragment StoreEntitySet="ConstructionSite">
+          <ScalarProperty Name="FirmID" ColumnName="FirmID" />
+          <ScalarProperty Name="ConstructionSiteManagerID" ColumnName="ConstructionSiteManagerID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
+          <ScalarProperty Name="Base64Image" ColumnName="Base64Image" />
+          <ScalarProperty Name="IDConstructionSite" ColumnName="IDConstructionSite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConstructionSiteDiaryEntries">
+      <EntityTypeMapping TypeName="EzBuildDBModel.ConstructionSiteDiaryEntry">
+        <MappingFragment StoreEntitySet="ConstructionSiteDiaryEntry">
+          <ScalarProperty Name="ConstructionSiteID" ColumnName="ConstructionSiteID" />
+          <ScalarProperty Name="DiaryEntryEmployeeID" ColumnName="DiaryEntryEmployeeID" />
+          <ScalarProperty Name="DiaryEntryDate" ColumnName="DiaryEntryDate" />
+          <ScalarProperty Name="DiaryEntry" ColumnName="DiaryEntry" />
+          <ScalarProperty Name="IDConstructionSiteDiary" ColumnName="IDConstructionSiteDiary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EzBuildDBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="ConstructionSiteID" ColumnName="ConstructionSiteID" />
+          <ScalarProperty Name="FirmID" ColumnName="FirmID" />
+          <ScalarProperty Name="EmployeeTypeID" ColumnName="EmployeeTypeID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="FirebaseID" ColumnName="FirebaseID" />
+          <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeHours">
+      <EntityTypeMapping TypeName="EzBuildDBModel.EmployeeHour">
+        <MappingFragment StoreEntitySet="EmployeeHours">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="DateWorkDone" ColumnName="DateWorkDone" />
+          <ScalarProperty Name="HoursWorked" ColumnName="HoursWorked" />
+          <ScalarProperty Name="IDEmployeeHours" ColumnName="IDEmployeeHours" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeTypes">
+      <EntityTypeMapping TypeName="EzBuildDBModel.EmployeeType">
+        <MappingFragment StoreEntitySet="EmployeeType">
+          <ScalarProperty Name="EmployeeType1" ColumnName="EmployeeType" />
+          <ScalarProperty Name="IDEmployeeType" ColumnName="IDEmployeeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipments">
+      <EntityTypeMapping TypeName="EzBuildDBModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipment">
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="EquipmentDescription" ColumnName="EquipmentDescription" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+          <ScalarProperty Name="Base64Image" ColumnName="Base64Image" />
+          <ScalarProperty Name="IDEquipment" ColumnName="IDEquipment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentHistories">
+      <EntityTypeMapping TypeName="EzBuildDBModel.EquipmentHistory">
+        <MappingFragment StoreEntitySet="EquipmentHistory">
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+          <ScalarProperty Name="QuantityTaken" ColumnName="QuantityTaken" />
+          <ScalarProperty Name="DateEquipmentTaken" ColumnName="DateEquipmentTaken" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="IDEquipmentHistory" ColumnName="IDEquipmentHistory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Firms">
+      <EntityTypeMapping TypeName="EzBuildDBModel.Firm">
+        <MappingFragment StoreEntitySet="Firm">
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="IDFirm" ColumnName="IDFirm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meetings">
+      <EntityTypeMapping TypeName="EzBuildDBModel.Meeting">
+        <MappingFragment StoreEntitySet="Meeting">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="MeetingDescription" ColumnName="MeetingDescription" />
+          <ScalarProperty Name="MeetingDuration" ColumnName="MeetingDuration" />
+          <ScalarProperty Name="MeetingStartTime" ColumnName="MeetingStartTime" />
+          <ScalarProperty Name="MeetingDate" ColumnName="MeetingDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="IDMeeting" ColumnName="IDMeeting" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EzBuildDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouses">
+      <EntityTypeMapping TypeName="EzBuildDBModel.Warehouse">
+        <MappingFragment StoreEntitySet="Warehouse">
+          <ScalarProperty Name="WarehouseManagerID" ColumnName="WarehouseManagerID" />
+          <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
+          <ScalarProperty Name="IDWarehouse" ColumnName="IDWarehouse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

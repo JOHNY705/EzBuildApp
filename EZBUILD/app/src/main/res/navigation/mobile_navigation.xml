@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_construction_sites">
+
+    <fragment
+        android:id="@+id/navigation_construction_sites"
+        android:name="hr.itrojnar.ezbuild.view.fragments.ConstructionSitesFragment"
+        android:label="@string/navigation_title_construction_sites"
+        tools:layout="@layout/fragment_construction_sites" >
+        <action
+            android:id="@+id/action_navigation_construction_sites_to_addConstructionSiteFragment"
+            app:destination="@id/addConstructionSiteFragment" />
+        <action
+            android:id="@+id/action_navigation_construction_sites_to_constructionSiteDetailsFragment"
+            app:destination="@id/constructionSiteDetailsFragment" />
+        <action
+            android:id="@+id/action_navigation_construction_sites_to_editConstructionSiteFragment"
+            app:destination="@id/editConstructionSiteFragment" />
+        <action
+            android:id="@+id/action_navigation_construction_sites_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_employees"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EmployeesFragment"
+        android:label="@string/title_employees"
+        tools:layout="@layout/fragment_employees" >
+        <action
+            android:id="@+id/action_navigation_employees_to_employeeDetailsFragment"
+            app:destination="@id/employeeDetailsFragment" />
+        <action
+            android:id="@+id/action_navigation_employees_to_addEmployeeFragment"
+            app:destination="@id/addEmployeeFragment" />
+        <action
+            android:id="@+id/action_navigation_employees_to_editEmployeeFragment"
+            app:destination="@id/editEmployeeFragment" />
+        <action
+            android:id="@+id/action_navigation_employees_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment><fragment
+        android:id="@+id/navigation_warehouse"
+        android:name="hr.itrojnar.ezbuild.view.fragments.WarehouseFragment"
+        android:label="@string/title_warehouse"
+        tools:layout="@layout/fragment_warehouse" >
+        <action
+            android:id="@+id/action_navigation_warehouse_to_addWarehouseFragment"
+            app:destination="@id/addWarehouseFragment" />
+        <action
+            android:id="@+id/action_navigation_warehouse_to_editWarehouseFragment"
+            app:destination="@id/editWarehouseFragment" />
+        <action
+            android:id="@+id/action_navigation_warehouse_to_equipmentFragment"
+            app:destination="@id/equipmentFragment" />
+        <action
+            android:id="@+id/action_navigation_warehouse_to_equipmentInChargeFragment"
+            app:destination="@id/equipmentLeasedFragment" />
+        <action
+            android:id="@+id/action_navigation_warehouse_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment><fragment
+        android:id="@+id/addConstructionSiteFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.AddConstructionSiteFragment"
+        android:label="Novo gradilište"
+        tools:layout="@layout/fragment_add_construction_site" >
+        <action
+            android:id="@+id/action_addConstructionSiteFragment_to_navigation_construction_sites"
+            app:destination="@id/navigation_construction_sites"
+            app:popUpTo="@+id/navigation_construction_sites"
+            app:popUpToInclusive="true"/>
+    </fragment><fragment
+        android:id="@+id/constructionSiteDetailsFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.ConstructionSiteDetailsFragment"
+        android:label="@string/lbl_construction_site_details"
+        tools:layout="@layout/fragment_construction_site_details">
+        <argument
+            android:name="constructionSite"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.ConstructionSite"
+            />
+        <action
+            android:id="@+id/action_constructionSiteDetailsFragment_to_addDiaryEntryFragment"
+            app:destination="@id/addDiaryEntryFragment" />
+        <action
+            android:id="@+id/action_constructionSiteDetailsFragment_to_editCSDiaryEntryFragment"
+            app:destination="@id/editCSDiaryEntryFragment" />
+        <action
+            android:id="@+id/action_constructionSiteDetailsFragment_to_navigation_construction_sites"
+            app:destination="@id/navigation_construction_sites"
+            app:popUpTo="@id/navigation_construction_sites"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_constructionSiteDetailsFragment_to_editConstructionSiteFragment"
+            app:destination="@id/editConstructionSiteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDiaryEntryFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.AddDiaryEntryFragment"
+        android:label="@string/navigation_title_new_diary_entry"
+        tools:layout="@layout/fragment_add_diary_entry" >
+        <argument
+            android:name="constructionSiteID"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_addDiaryEntryFragment_to_constructionSiteDetailsFragment"
+            app:destination="@id/constructionSiteDetailsFragment"
+            app:popUpTo="@+id/constructionSiteDetailsFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editCSDiaryEntryFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EditDiaryEntryFragment"
+        android:label="@string/navigation_title_edit_diary_entry"
+        tools:layout="@layout/fragment_edit_diary_entry" >
+        <argument
+            android:name="diaryEntry"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.ConstructionSiteDiaryEntry"
+            />
+        <action
+            android:id="@+id/action_editCSDiaryEntryFragment_to_constructionSiteDetailsFragment"
+            app:destination="@id/constructionSiteDetailsFragment"
+            app:popUpTo="@id/constructionSiteDetailsFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editConstructionSiteFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EditConstructionSiteFragment"
+        android:label="@string/navigation_title_edit_construction_site"
+        tools:layout="@layout/fragment_edit_construction_site" >
+        <argument
+            android:name="constructionSite"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.ConstructionSite"
+            />
+        <argument android:name="fragment"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_editConstructionSiteFragment_to_navigation_construction_sites"
+            app:destination="@id/navigation_construction_sites"
+            app:popUpTo="@id/navigation_construction_sites"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_editConstructionSiteFragment_to_constructionSiteDetailsFragment"
+            app:destination="@id/constructionSiteDetailsFragment"
+            app:popUpTo="@id/constructionSiteDetailsFragment"
+            app:popUpToInclusive="true"/>
+    </fragment><fragment
+        android:id="@+id/navigation_meetings"
+        android:name="hr.itrojnar.ezbuild.view.fragments.MeetingsFragment"
+        android:label="@string/title_meetings"
+        tools:layout="@layout/fragment_meetings" >
+        <action
+            android:id="@+id/action_navigation_meetings_to_addMeetingFragment"
+            app:destination="@id/addMeetingFragment" />
+        <action
+            android:id="@+id/action_navigation_meetings_to_editMeetingFragment"
+            app:destination="@id/editMeetingFragment" />
+        <action
+            android:id="@+id/action_navigation_meetings_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment><fragment
+        android:id="@+id/navigation_employee_hours_menu"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EmployeeHoursMenuFragment"
+        android:label="@string/title_work_hours"
+        tools:layout="@layout/fragment_employee_hours_menu" >
+        <action
+            android:id="@+id/action_navigation_employee_hours_menu_to_employeeHoursForConstructionSiteFragment"
+            app:destination="@id/employeeHoursForConstructionSiteFragment" />
+        <action
+            android:id="@+id/action_navigation_employee_hours_menu_to_employeeHoursForEmployeeTypesFragment"
+            app:destination="@id/employeeHoursForEmployeeTypesFragment" />
+        <action
+            android:id="@+id/action_navigation_employee_hours_menu_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment><fragment
+        android:id="@+id/employeeDetailsFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EmployeeDetailsFragment"
+        android:label="@string/title_employee_details"
+        tools:layout="@layout/fragment_employee_details" >
+        <argument
+            android:name="employee"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.Employee"
+            />
+        <argument
+            android:name="warehouse"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.Warehouse"/>
+        <argument
+            android:name="constructionSites"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.ConstructionSite[]"/>
+        <action
+            android:id="@+id/action_employeeDetailsFragment_to_navigation_employees"
+            app:destination="@id/navigation_employees" />
+        <action
+            android:id="@+id/action_employeeDetailsFragment_to_editEmployeeFragment"
+            app:destination="@id/editEmployeeFragment" />
+    </fragment><fragment
+        android:id="@+id/addEmployeeFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.AddEmployeeFragment"
+        android:label="@string/title_new_employee"
+        tools:layout="@layout/fragment_add_employee" >
+        <action
+            android:id="@+id/action_addEmployeeFragment_to_navigation_employees"
+            app:destination="@id/navigation_employees"
+            app:popUpTo="@id/navigation_employees"
+            app:popUpToInclusive="true"/>
+    </fragment><fragment
+        android:id="@+id/employeeHoursForConstructionSiteFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EmployeeHoursForConstructionSiteFragment"
+        android:label="@string/title_employee_hours_for_construction_site"
+        tools:layout="@layout/fragment_employee_hours_for_construction_site" >
+        <argument
+            android:name="constructionSite"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.ConstructionSite"
+            />
+        <action
+            android:id="@+id/action_employeeHoursForConstructionSiteFragment_to_navigation_employee_hours_menu"
+            app:destination="@id/navigation_employee_hours_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeHoursForEmployeeTypesFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EmployeeHoursForEmployeeTypesFragment"
+        android:label="fragment_employee_hours_for_employee_types"
+        tools:layout="@layout/fragment_employee_hours_for_employee_types">
+        <argument
+            android:name="employeeTypeID"
+            app:argType="integer"
+            />
+    </fragment><fragment
+        android:id="@+id/addMeetingFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.AddMeetingFragment"
+        android:label="@string/title_new_meeting"
+        tools:layout="@layout/fragment_add_meeting" >
+        <action
+            android:id="@+id/action_addMeetingFragment_to_navigation_meetings"
+            app:destination="@id/navigation_meetings" />
+    </fragment><fragment
+        android:id="@+id/editMeetingFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EditMeetingFragment"
+        android:label="@string/title_edit_meeting"
+        tools:layout="@layout/fragment_edit_meeting" >
+        <argument
+            android:name="meeting"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.Meeting"
+            />
+        <action
+            android:id="@+id/action_editMeetingFragment_to_navigation_meetings"
+            app:destination="@id/navigation_meetings" />
+    </fragment><fragment
+        android:id="@+id/addWarehouseFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.AddWarehouseFragment"
+        android:label="@string/navigation_add_warehouse"
+        tools:layout="@layout/fragment_add_warehouse" >
+        <action
+            android:id="@+id/action_addWarehouseFragment_to_navigation_warehouse"
+            app:destination="@id/navigation_warehouse"
+            app:popUpTo="@id/navigation_warehouse"
+            app:popUpToInclusive="true"/>
+    </fragment><fragment
+        android:id="@+id/editWarehouseFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EditWarehouseFragment"
+        android:label="@string/title_edit_warehouse"
+        tools:layout="@layout/fragment_edit_warehouse" >
+        <argument
+            android:name="warehouse"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.Warehouse"
+            />
+        <action
+            android:id="@+id/action_editWarehouseFragment_to_navigation_warehouse"
+            app:destination="@id/navigation_warehouse"
+            app:popUpTo="@id/navigation_warehouse"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/equipmentFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EquipmentFragment"
+        android:label="@string/title_equipment_at_warehouse"
+        tools:layout="@layout/fragment_equipment" >
+        <argument
+            android:name="warehouseID"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_equipmentFragment_to_addEquipmentFragment"
+            app:destination="@id/addEquipmentFragment" />
+        <action
+            android:id="@+id/action_equipmentFragment_to_equipmentDetailsFragment"
+            app:destination="@id/equipmentDetailsFragment" />
+        <action
+            android:id="@+id/action_equipmentFragment_to_editEquipmentFragment"
+            app:destination="@id/editEquipmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEquipmentFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.AddEquipmentFragment"
+        android:label="@string/title_add_equipment"
+        tools:layout="@layout/fragment_add_equipment">
+        <argument
+            android:name="warehouseID"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_addEquipmentFragment_to_equipmentFragment"
+            app:destination="@id/equipmentFragment"
+            app:popUpTo="@id/equipmentFragment"
+            app:popUpToInclusive="true"/>
+    </fragment><fragment
+        android:id="@+id/equipmentDetailsFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EquipmentDetailsFragment"
+        android:label="@string/navigation_title_equipment_details"
+        tools:layout="@layout/fragment_equipment_details" >
+        <argument
+            android:name="equipment"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.Equipment"/>
+        <argument
+            android:name="warehouseID"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_equipmentDetailsFragment_to_editEquipmentFragment"
+            app:destination="@id/editEquipmentFragment" />
+        <action
+            android:id="@+id/action_equipmentDetailsFragment_to_equipmentFragment"
+            app:destination="@id/equipmentFragment"
+            app:popUpTo="@id/equipmentFragment"
+            app:popUpToInclusive="true"/>
+    </fragment><fragment
+        android:id="@+id/editEquipmentFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EditEquipmentFragment"
+        android:label="@string/navigation_title_edit_equipment"
+        tools:layout="@layout/fragment_edit_equipment" >
+        <argument
+            android:name="equipment"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.Equipment"
+            />
+        <argument android:name="fragment"
+            app:argType="string"
+            />
+        <argument
+            android:name="warehouseID"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_editEquipmentFragment_to_equipmentDetailsFragment"
+            app:destination="@id/equipmentDetailsFragment"
+            app:popUpTo="@id/equipmentDetailsFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_editEquipmentFragment_to_equipmentFragment"
+            app:destination="@id/equipmentFragment"
+            app:popUpTo="@id/equipmentFragment"
+            app:popUpToInclusive="true"/>
+    </fragment><fragment
+        android:id="@+id/equipmentLeasedFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EquipmentLeasedFragment"
+        android:label="@string/navigation_title_equipment_in_charge"
+        tools:layout="@layout/fragment_equipment_leased">
+        <argument
+            android:name="warehouseID"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_equipmentLeasedFragment_to_leasedEquipmentDetailsFragment"
+            app:destination="@id/leasedEquipmentDetailsFragment" />
+        <action
+            android:id="@+id/action_equipmentLeasedFragment_to_newLeaseEquipmentFragment"
+            app:destination="@id/newLeaseEquipmentFragment" />
+        <action
+            android:id="@+id/action_equipmentLeasedFragment_to_editLeasedEquipmentFragment"
+            app:destination="@id/editLeasedEquipmentFragment" />
+    </fragment><fragment
+        android:id="@+id/leasedEquipmentDetailsFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.LeasedEquipmentDetailsFragment"
+        android:label="@string/title_navigation_equipment_lease_details"
+        tools:layout="@layout/fragment_leased_equipment_details">
+        <argument
+            android:name="employeeId"
+            app:argType="integer"
+            />
+        <argument
+            android:name="leaseDate"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_leasedEquipmentDetailsFragment_to_equipmentLeasedFragment"
+            app:destination="@id/equipmentLeasedFragment"
+            app:popUpTo="@id/equipmentLeasedFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_leasedEquipmentDetailsFragment_to_editLeasedEquipmentFragment"
+            app:destination="@id/editLeasedEquipmentFragment" />
+    </fragment><fragment
+        android:id="@+id/newLeaseEquipmentFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.NewLeaseEquipmentFragment"
+        android:label="@string/navigation_title_new_lease"
+        tools:layout="@layout/fragment_new_lease_equipment">
+        <argument
+            android:name="warehouseID"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_newLeaseEquipmentFragment_to_equipmentLeasedFragment"
+            app:destination="@id/equipmentLeasedFragment"
+            app:popUpTo="@id/equipmentLeasedFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editLeasedEquipmentFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EditLeasedEquipmentFragment"
+        android:label="@string/navigation_title_edit_leased_equipment"
+        tools:layout="@layout/fragment_edit_leased_equipment">
+        <argument
+            android:name="employeeId"
+            app:argType="integer"
+            />
+        <argument
+            android:name="leaseDate"
+            app:argType="string"
+            />
+        <argument
+            android:name="warehouseID"
+            app:argType="integer"
+            />
+        <argument android:name="fragment"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_editLeasedEquipmentFragment_to_equipmentLeasedFragment"
+            app:destination="@id/equipmentLeasedFragment"
+            app:popUpTo="@id/equipmentLeasedFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_editLeasedEquipmentFragment_to_leasedEquipmentDetailsFragment"
+            app:destination="@id/leasedEquipmentDetailsFragment"
+            app:popUpTo="@id/leasedEquipmentDetailsFragment"
+            app:popUpToInclusive="true"/>
+    </fragment><fragment
+        android:id="@+id/editEmployeeFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EditEmployeeFragment"
+        android:label="@string/navigation_title_edit_employee"
+        tools:layout="@layout/fragment_edit_employee">
+        <argument
+            android:name="employee"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.Employee"
+            />
+        <argument
+            android:name="warehouse"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.Warehouse"/>
+        <argument
+            android:name="constructionSites"
+            app:argType="hr.itrojnar.ezbuild.model.viewModels.ConstructionSite[]"/>
+        <argument
+            android:name="fragment"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_editEmployeeFragment_to_employeeDetailsFragment"
+            app:destination="@id/employeeDetailsFragment"
+            app:popUpTo="@id/employeeDetailsFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_editEmployeeFragment_to_navigation_employees"
+            app:destination="@id/navigation_employees"
+            app:popUpTo="@id/navigation_employees"
+            app:popUpToInclusive="true"/>
+    </fragment><fragment
+        android:id="@+id/profileFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.ProfileFragment"
+        android:label="@string/navigation_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment><fragment
+        android:id="@+id/editProfileFragment"
+        android:name="hr.itrojnar.ezbuild.view.fragments.EditProfileFragment"
+        android:label="@string/title_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
+

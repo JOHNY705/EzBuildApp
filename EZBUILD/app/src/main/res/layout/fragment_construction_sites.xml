@@ -1,0 +1,91 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cs_swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.ConstructionSitesFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:background="@color/very_light_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/very_light_gray">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_cs_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:gravity="start"
+                android:textAlignment="gravity"
+                android:textSize="@dimen/_16sdp"
+                android:text="@string/lbl_active_cs" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_construction_sites_list_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_3sdp"/>
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_cs_fragment_no_active_cs_available"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                android:text="@string/lbl_no_active_construction_sites_available" />
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_cs_inactive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:gravity="start"
+                android:textAlignment="gravity"
+                android:textSize="@dimen/_16sdp"
+                android:text="@string/lbl_inactive_cs" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_construction_sites_list_inactive"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_47sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            <hr.itrojnar.ezbuild.utils.EzBuildTextView
+                android:id="@+id/tv_cs_fragment_no_inactive_cs_available"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                android:text="@string/lbl_no_inactive_construction_sites_available" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

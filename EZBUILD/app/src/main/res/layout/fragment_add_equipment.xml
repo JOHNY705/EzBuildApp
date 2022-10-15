@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".view.fragments.AddConstructionSiteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_add_cs_select_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220sdp">
+
+            <ImageView
+                android:id="@+id/iv_equipment_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cs_image_background"
+                android:contentDescription="@string/image_contentDescription"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_add_equipment_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:contentDescription="@string/image_contentDescription"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/_16sdp"
+                android:src="@drawable/ic_add_a_photo" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_add_equipment_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/et_hint_equipment_name"
+            android:textColorHint="@color/color_secondary_text">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildEditText
+                android:id="@+id/et_add_equipment_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/_13sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                tools:text="Bušilica" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_add_equipment_quantity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/et_hint_equipment_quantity"
+            android:textColorHint="@color/color_secondary_text">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildEditText
+                android:id="@+id/et_add_equipment_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="@dimen/_13sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                tools:text="5" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_add_equipment_description"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/et_hint_equipment_decription"
+            android:textColorHint="@color/color_secondary_text">
+
+            <hr.itrojnar.ezbuild.utils.EzBuildEditText
+                android:id="@+id/et_add_equipment_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLines="8"
+                android:padding="@dimen/_13sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                tools:text="Testni opis" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <hr.itrojnar.ezbuild.utils.EzBuildButton
+            android:id="@+id/btn_add_equipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/button_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/btn_lbl_add_equipment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+    </LinearLayout>
+</ScrollView>
